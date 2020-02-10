@@ -1,0 +1,13 @@
+name: "Earmuffs"
+description: "Status check source code for foul language."
+author: "Danny Hinshaw"
+
+inputs:
+  EXCLUDE_FILES:
+    description: "Regular expression of files to ignore."
+    default: "\\.idea|\\.git|node_modules"
+    required: false
+
+runs:
+  using: "docker"
+  image: "Dockerfile"

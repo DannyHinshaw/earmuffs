@@ -1,0 +1,13 @@
+name: Integration Test
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Self test
+        id: selftest
+        uses: dannyhinshaw/earmuffs@master
+        with:
+          exclude_files: "\\.git|bad\\.txt|parse_test\\.go"
