@@ -1,3 +1,6 @@
+![Build](https://github.com/DannyHinshaw/earmuffs/workflows/Build/badge.svg)
+![Integration Test](https://github.com/DannyHinshaw/earmuffs/workflows/Integration%20Test/badge.svg)
+
 # Earmuffs - GitHub Action
 
 ![oldschool earmuffs](https://i.pinimg.com/originals/05/1c/ff/051cff03d56ea5a34e7c42c4c2fb4eb8.jpg)
