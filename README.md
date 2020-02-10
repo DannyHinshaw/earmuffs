@@ -32,7 +32,7 @@ jobs:
       - name: Run Earmuffs
         uses: dannyhinshaw/earmuffs@master
         with:
-          exclude_files: ".html" # optional regex, default "\\.idea|\\.git|node_modules"
+          exclude_files: "\\.html" # optional regex, default "\\.idea|\\.git|node_modules"
 
       - name: Build (or whatever)
         run: |
