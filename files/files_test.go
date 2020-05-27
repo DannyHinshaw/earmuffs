@@ -7,8 +7,8 @@ import (
 
 func TestGetWordsDirPath(t *testing.T) {
 	path := GetWordsDirPath()
-	if !strings.HasSuffix(path, ProjectName+"/") {
-		t.Fatal("excludes is empty empty array ")
+	if !strings.HasSuffix(path, ProjectName+"/data/") {
+		t.Fatal("excludes is an empty array ")
 	}
 }
 
@@ -24,7 +24,7 @@ func TestLoadProfanities(t *testing.T) {
 	path := GetWordsDirPath()
 	excludes := LoadExcludes(path + "/words/bad-words.txt")
 	if len(excludes) < 1 {
-		t.Fatal("profanities is empty empty array ")
+		t.Fatal("profanities is an empty array ")
 	}
 }
 
