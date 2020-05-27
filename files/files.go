@@ -87,8 +87,8 @@ func GetWordsDirPath() string {
 func GetWordsPayload() schemas.WordsPayload {
 	path := GetWordsDirPath()
 	payload := schemas.WordsPayload{
-		ProfanitiesRegex: LoadProfanities(path + "words/bad-words.txt"),
-		ExcludeWords:     LoadExcludes(path + "words/excludes.txt"),
+		ProfanitiesRegex: LoadProfanities(path + "data/words/bad-words.txt"),
+		ExcludeWords:     LoadExcludes(path + "data/words/excludes.txt"),
 	}
 
 	return payload
