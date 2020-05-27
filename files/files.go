@@ -75,7 +75,7 @@ func GetWordsDirPath() string {
 	path := pwd
 	if !strings.HasSuffix(pwd, ProjectName) {
 		base := strings.Split(pwd, ProjectName)[0]
-		path = base + "/" + ProjectName
+		path = base + ProjectName + "/data"
 	}
 
 	return path + "/"
@@ -84,7 +84,6 @@ func GetWordsDirPath() string {
 // GetWordsPayload - Wrapper function to get data from required files.
 func GetWordsPayload() schemas.WordsPayload {
 	path := GetWordsDirPath()
-	log.Println("path::", path)
 	payload := schemas.WordsPayload{
 		ProfanitiesRegex: LoadProfanities(path + "words/bad-words.txt"),
 		ExcludeWords:     LoadExcludes(path + "words/excludes.txt"),
