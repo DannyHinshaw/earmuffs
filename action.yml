@@ -1,6 +1,9 @@
 name: "EarmuffsAction"
 description: "Status check source code for foul language."
 author: "Danny Hinshaw"
+branding:
+  icon: alert-triangle
+  color: yellow
 
 inputs:
   EXCLUDE_FILES:
