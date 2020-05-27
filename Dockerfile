@@ -15,6 +15,6 @@ FROM gcr.io/distroless/static
 
 # Copy over binary and words dir
 COPY --from=builder /earmuffs/app /app
-COPY --from=builder /earmuffs/words /words
+COPY --from=builder /earmuffs/data/words data/words
 
 ENTRYPOINT ["/app"]
