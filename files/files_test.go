@@ -14,7 +14,7 @@ func TestGetWordsDirPath(t *testing.T) {
 
 func TestLoadExcludes(t *testing.T) {
 	path := GetWordsDirPath()
-	excludes := LoadExcludes(path + "/words/excludes.txt")
+	excludes := LoadExcludes(path + "words/excludes.txt")
 	if len(excludes) < 1 {
 		t.Fatal("excludes file is empty")
 	}
@@ -22,7 +22,7 @@ func TestLoadExcludes(t *testing.T) {
 
 func TestLoadProfanities(t *testing.T) {
 	path := GetWordsDirPath()
-	excludes := LoadExcludes(path + "/words/bad-words.txt")
+	excludes := LoadExcludes(path + "words/bad-words.txt")
 	if len(excludes) < 1 {
 		t.Fatal("profanities is an empty array ")
 	}

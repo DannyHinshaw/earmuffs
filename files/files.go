@@ -14,6 +14,7 @@ const ProjectName = "earmuffs"
 
 // LoadProfanities - Loads the predefined "bad-words" file into memory.
 func LoadProfanities(path string) string {
+	log.Println("LoadProfanities::path::", path)
 	read, err := os.Open(path)
 	if err != nil {
 		log.Fatal(err.Error())
@@ -38,6 +39,7 @@ func LoadProfanities(path string) string {
 
 // LoadExcludes - Loads the predefined words to exclude if parsed as profanity.
 func LoadExcludes(path string) []string {
+	log.Println("LoadExcludes::path::", path)
 	read, err := os.Open(path)
 	if err != nil {
 		log.Fatal(err.Error())

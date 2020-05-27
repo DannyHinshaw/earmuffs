@@ -65,6 +65,7 @@ func CheckLineProfanity(line string, n int) schemas.LineMatch {
 // scanFile - Opens a file and check it for profanity.
 func scanFile(path string) []schemas.LineMatch {
 	file, err := os.Open(path)
+	log.Println("scanFile::path::", path)
 	if err != nil {
 		log.Fatal(err)
 	}
