@@ -242,7 +242,7 @@ cocktease
 cocky
 cohee
 coitus
-color
+# color
 colored
 coloured
 commie

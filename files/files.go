@@ -14,7 +14,6 @@ const ProjectName = "earmuffs"
 
 // LoadProfanities - Loads the predefined "bad-words" file into memory.
 func LoadProfanities(path string) string {
-	log.Println("LoadProfanities::path::", path)
 	read, err := os.Open(path)
 	if err != nil {
 		log.Fatal(err.Error())
@@ -26,8 +25,9 @@ func LoadProfanities(path string) string {
 		curr := scanner.Text()
 
 		// Only want words with more than 3 letters or "a$$" (not going overboard)
-		aWord := "a" + "s" + "s"
-		if len(curr) > 3 || curr == aWord {
+		aWord := "a" + "s" + "s" // Don't trigger the action on itself (integration test)
+		isComment := strings.HasPrefix(curr, "#")
+		if isComment || curr == aWord || len(curr) > 3 {
 			lines = append(lines, curr)
 		}
 	}
@@ -39,7 +39,6 @@ func LoadProfanities(path string) string {
 
 // LoadExcludes - Loads the predefined words to exclude if parsed as profanity.
 func LoadExcludes(path string) []string {
-	log.Println("LoadExcludes::path::", path)
 	read, err := os.Open(path)
 	if err != nil {
 		log.Fatal(err.Error())
