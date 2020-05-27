@@ -1057,7 +1057,7 @@ rere
 retard
 retarded
 ribbed
-rigger
+# rigger
 rimjob
 rimming
 roach
